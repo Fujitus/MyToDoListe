@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="eu.epitech.costa.todolist.editElem">
+
+    <View
+        android:id="@+id/vBackgroudContent"
+        android:layout_width="310dp"
+        android:layout_height="88dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:background="#E3E3E3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTitle" />
+
+    <View
+        android:id="@+id/vActionBar"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary" />
+
+    <View
+        android:id="@+id/vBackgroudTitle"
+        android:layout_width="310dp"
+        android:layout_height="68dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="64dp"
+        android:background="#E3E3E3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/vBackgroudDate"
+        android:layout_width="306dp"
+        android:layout_height="46dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:background="#E3E3E3"
+        android:onClick="addDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vBackgroudTime" />
+
+    <View
+        android:id="@+id/vBackgroudTime"
+        android:layout_width="310dp"
+        android:layout_height="46dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:background="#E3E3E3"
+        android:onClick="addTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etContent" />
+
+    <View
+        android:id="@+id/vBackgroudTag"
+        android:layout_width="106dp"
+        android:layout_height="46dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="136dp"
+        android:background="#E3E3E3"
+        android:onClick="setTag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etContent" />
+
+
+    <ImageView
+        android:id="@+id/ivTime"
+        android:layout_width="41dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="248dp"
+        android:onClick="addTime"
+        app:layout_constraintBottom_toBottomOf="@+id/vBackgroudTime"
+        app:layout_constraintStart_toStartOf="@+id/vBackgroudTime"
+        app:layout_constraintTop_toTopOf="@+id/vBackgroudTime"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_action_time" />
+
+    <ImageView
+        android:id="@+id/ivDate"
+        android:layout_width="39dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="248dp"
+        android:onClick="addDate"
+        app:layout_constraintBottom_toBottomOf="@+id/vBackgroudDate"
+        app:layout_constraintStart_toStartOf="@+id/vBackgroudDate"
+        app:layout_constraintTop_toTopOf="@+id/vBackgroudDate"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_action_date" />
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="311dp"
+        android:layout_height="68dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:hint="  Title"
+        android:inputType="textPersonName"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etContent"
+        android:layout_width="310dp"
+        android:layout_height="89dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="  Content"
+        android:inputType="textPersonName"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTitle" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="addTime"
+        android:text="Set Time"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vBackgroudTime"
+        app:layout_constraintEnd_toEndOf="@+id/vBackgroudTime"
+        app:layout_constraintStart_toStartOf="@+id/vBackgroudTime"
+        app:layout_constraintTop_toTopOf="@+id/vBackgroudTime" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="addDate"
+        android:text="Set Date"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vBackgroudDate"
+        app:layout_constraintEnd_toEndOf="@+id/vBackgroudDate"
+        app:layout_constraintStart_toStartOf="@+id/vBackgroudDate"
+        app:layout_constraintTop_toTopOf="@+id/vBackgroudDate" />
+
+    <TextView
+        android:id="@+id/tvTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="setTag"
+        android:text="Set TAG"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vBackgroudTag"
+        app:layout_constraintEnd_toEndOf="@+id/vBackgroudTag"
+        app:layout_constraintStart_toStartOf="@+id/vBackgroudTag"
+        app:layout_constraintTop_toTopOf="@+id/vBackgroudTag" />
+
+    <TextView
+        android:id="@+id/tvActionBar"
+        android:layout_width="191dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/indie_flower"
+        android:text="- To Do List -"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/vActionBar"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="33dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:onClick="quit"
+        app:layout_constraintStart_toStartOf="@+id/vActionBar"
+        app:srcCompat="?attr/homeAsUpIndicator"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ImageView
+        android:id="@+id/ivAdd"
+        android:layout_width="37dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="saveElem"
+        app:layout_constraintEnd_toEndOf="@+id/vActionBar"
+        app:srcCompat="@drawable/ic_action_add"
+        tools:layout_editor_absoluteY="0dp" />
+
+</android.support.constraint.ConstraintLayout>

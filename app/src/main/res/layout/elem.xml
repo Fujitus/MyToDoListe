@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/vBackgroudElem"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#E3E3E3" />
+
+    <View
+        android:id="@+id/sep"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/vBackgroudElem"
+        android:background="#000000" />
+
+    <ImageView
+        android:id="@+id/ivEdite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/tvTitle"
+        android:onClick="editTask"
+        app:srcCompat="@drawable/ic_action_edit" />
+
+    <ImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvTag"
+        android:layout_alignParentEnd="true"
+        android:onClick="deleteTask"
+        app:srcCompat="@drawable/ic_action_delete" />
+
+    <CheckBox
+        android:id="@+id/cbDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvDate"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="14dp"
+        android:checked="false"
+        android:duplicateParentState="true"
+        android:onClick="doneTask"
+        android:scaleX="2.00"
+        android:scaleY="2.00" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="18dp"
+        android:layout_toEndOf="@+id/cbDone"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        tools:text="Title" />
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/tvTitle"
+        android:layout_alignStart="@+id/tvTitle"
+        android:layout_below="@+id/tvTitle"
+        android:text="@string/content"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_above="@+id/sep"
+        android:layout_alignEnd="@+id/tvContent"
+        android:layout_alignStart="@+id/tvContent"
+        android:layout_below="@+id/tvContent"
+        android:text="@string/date"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/ivShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/ivEdite"
+        android:layout_below="@+id/tvContent"
+        android:onClick="share"
+        app:srcCompat="?attr/actionModeShareDrawable" />
+
+    <TextView
+        android:id="@+id/tvTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ivEdite"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toEndOf="@+id/tvTitle"
+        android:layout_toStartOf="@+id/ivEdite"
+        android:text="Tag"
+        android:textAlignment="center"
+        android:textColor="@android:color/black" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cbDone"
+        android:layout_alignEnd="@+id/tvTitle"
+        app:srcCompat="@drawable/ic_action_tag" />
+
+</RelativeLayout>
